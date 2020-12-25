@@ -9,6 +9,11 @@ const song = document.getElementById("song");
 
 const mobileQuery = window.matchMedia('(max-width: 599px)');
 
+window.addEventListener('touchstart', () => {
+  song.muted = false;
+}
+);
+
 function playAudio() {
   song.play();
 }
@@ -29,6 +34,8 @@ function myMove() {
   const elemTwo =  document.getElementById("animateSleigh");
   document.getElementById('peeker').classList.toggle('hidden');
   document.getElementById('dexterWalks').classList.toggle('hidden');
+
+
 
   
   //decorations
@@ -59,6 +66,7 @@ function myMove() {
   // how much time passed from the start?
   let timePassed = Date.now() - start;
   if(timePassed >= 2000){
+  
   playAudio();
   }
   if (timePassed >= 8000) {
