@@ -1,11 +1,13 @@
 document.getElementById('christmasTime').addEventListener('click', myMove);
 document.getElementById('christmasTime').addEventListener('click', reset);
+
+
 const dexterSpeak = document.getElementById('dexterSpeak');
 let decorationHide = document.querySelectorAll('.decorationHide');
-
 const buttonBoy = document.getElementById('christmasTime');
-
 const song = document.getElementById("song");
+
+const mobileQuery = window.matchMedia('(max-width: 599px)');
 
 function playAudio() {
   song.play();
@@ -90,11 +92,16 @@ Array.from(decorationHide).forEach(element => {
   }, 1);
   
   function draw(timePassed) {
+    if(mobileQuery.matches) {
+      animate.style.left = (timePassed / 50) -8 + 'vw';
+      animateSleigh.style.left = (timePassed / 50) - 60 + 'vw';
+      dancingSanta.style.bottom = (timePassed / 100) - 76 + 'vh';
+    }else {
   animate.style.left = (timePassed / 135) -8 + 'vw';
   animateSleigh.style.left = (timePassed / 135) - 28 + 'vw';
   dancingSanta.style.bottom = (timePassed / 100) - 76 + 'vh';
   }
-
+  }
 
   let timerTwo = setInterval(function() {
   // how much time passed from the start?
@@ -113,10 +120,15 @@ Array.from(decorationHide).forEach(element => {
   }, 1);
 
   function imgAppear(timePassedAgain) {
+    if(mobileQuery.matches) {
+      photoOfUs.style.height = (timePassedAgain - 8000)  / 40 + 'vh';
+       photoOfUs.style.width = (timePassedAgain - 8000)  / 26.3  + 'vw';
+       dexterSpeak.style.right = (timePassedAgain - 8000)  / 88.9  + 'rem';
+    }else {
        photoOfUs.style.height = (timePassedAgain - 8000)  / 65 + 'vh';
        photoOfUs.style.width = ((timePassedAgain - 8000)  / 65) * 0.705 + 'vh';
   }
-
+  }
 
 }
 function reset(){

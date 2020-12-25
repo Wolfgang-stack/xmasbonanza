@@ -10,9 +10,14 @@ html {
   box-sizing: border-box;
 }
 
+.hidden {
+  visibility: hidden;
+} 
 /******************************************
 /* LAYOUT
 /*******************************************/
+@media only screen and (min-width: 600px){
+
 #christmasTime {
   position:absolute;
   left: 0vw;
@@ -259,14 +264,276 @@ right: -8vw;
 #dexterSpeak img {
   width: 100%;
 }
+}
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-.hidden {
-  visibility: hidden;
-} 
 
 /* .firstHide {
   visibility: hidden;
 } */
+
+
+
+
+@media only screen and (max-width: 599px) {
+  #christmasTime {
+  position:absolute;
+  top: 3vh;
+  left: 0vw;
+  right: 0vw;
+  max-width: 100vw;
+  display: block;
+  font-size: 2rem;
+  color:white;
+  background-color: rgba(255, 0, 0, 0.507);
+  margin:  0 auto;
+  z-index: 20;
+  
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+
+#container {
+  padding-top: 1vh;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Doggy and Sleigh */
+#animate {
+  position: absolute;
+  bottom: 33vh;
+  left: -8vw;
+  width: 25rem;
+  z-index: 10;
+}
+
+#animateSleigh {
+  position: absolute;
+  bottom: 33vh;
+  left: -51rem;
+  z-index: 4;
+  min-width: 20rem;
+  width: 20vw;
+}
+
+#animateSleigh img {
+  width: 100%;
+}
+
+#animate img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#animate #peeker {
+right: -8vw;
+}
+
+
+/*Photo(s)*/
+#photo{
+    position: absolute;
+    width: 0vh;
+    transform: rotate(0);
+    bottom: 0vh;
+    left: -24.5vw;
+    height: 0vh;
+    z-index: -2;
+}
+
+#photo img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 95%;
+  width: 95%;
+  border-radius: 2%;
+}
+
+
+
+#photo #imageBorder {
+  z-index: 15;
+  height: 100%;
+  width: 100%;
+  border-radius: 2%;
+}
+
+/* Decorations */
+#candle img, #catStocking img, #candle img, #giftBox img, #merryXmas img, #ornamentOne img, #treeOne img, #treeTwo img {
+  width: 100%;
+  display: block;
+  z-index: 1;
+}
+
+#dancingSanta {
+  position: absolute;
+  z-index: 2;
+  bottom: -70vh;
+  right: 25vw;
+  
+}
+
+#dancingSanta img {
+  width: 18rem;
+}
+
+#catStocking {
+  width: 8vh;
+  position: absolute;
+  top: 45vh;
+  left: 1vw;
+  transform: rotateY(180deg);
+}
+
+#candle {
+  width: 11vh;
+    position: absolute;
+    bottom: 6vh;
+    left: 1vw;
+  
+}
+
+#giftBox {
+  width: 10vh;
+  position: absolute;
+  bottom: 25vh;
+  left: 0vw;
+}
+
+#merryXmas {
+  position: absolute;
+  width: 50vw;
+  top: 13vh;
+  right: -1vw;
+  
+}
+
+#ornamentOne {
+  position: absolute;
+  width: 8vh;
+  top: 53vh;
+  right:  3vw;
+  transform: rotate(15deg);
+}
+
+#treeOne {
+  position: absolute;
+  width: 35vh;
+  bottom: 4vh;
+  left: 9vw;
+  z-index: -3;
+  
+  
+}
+
+#treeTwo {
+  position: absolute;
+  width: 35vh;
+  bottom: 4vh;
+  right: 4vw;
+  display: none;
+}
+
+#santaWalks{
+  position: absolute;
+  bottom: 6vh;
+  right: 5vw;
+}
+
+#rudolph {
+  width: 7rem; 
+  position: absolute;
+  bottom: 50vh;
+  right: 5vw;
+  
+}
+
+#rudolph img{
+  width: 100%;
+  display: none;
+}
+
+#xmasHouse {
+  position: absolute;
+  z-index: -1;
+  right: -2vw;
+  top: 28vh;
+}
+
+#santaSeal {
+  position: absolute;
+  left: 3vw;
+  display: none;
+}
+
+#santaSeal img{
+  opacity: 0.1;
+  z-index: -1;
+}
+
+#santaDance {
+  position: absolute;
+  top: 1vh;
+  left: 30vw;
+  display: none;
+}
+
+#santaScooter {
+  position: absolute;
+  bottom: 20vh;
+  right: 1vw;
+}
+
+#milkCookie {
+  position: absolute;
+  top: 11vh;
+  right: 35vw;
+}
+
+#wreath {
+  position: absolute;
+  top: 9vh;
+  left: -0.2vw;
+  transform: rotate(-10deg)
+}
+
+#chimney {
+  position: absolute;
+  top: 15vh;
+  right: 15vw;
+  display: none;
+}
+
+#flamingo {
+  opacity: 0.2;
+  position: absolute;
+  right: 20vw;
+  z-index: -1;
+  display: none;
+}
+
+#dexterSpeak {
+    position: absolute;
+    top: -23px;
+    right: 0rem;
+    width: 19rem;
+    z-index: 30;
+}
+
+
+#dexterSpeak img {
+  width: 100%;
+}
+}
