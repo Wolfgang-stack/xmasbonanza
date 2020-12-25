@@ -1,6 +1,6 @@
 document.getElementById('christmasTime').addEventListener('click', myMove);
 document.getElementById('christmasTime').addEventListener('click', reset);
-
+const dexterSpeak = document.getElementById('dexterSpeak');
 let decorationHide = document.querySelectorAll('.decorationHide');
 
 const buttonBoy = document.getElementById('christmasTime');
@@ -27,6 +27,8 @@ function myMove() {
   const elemTwo =  document.getElementById("animateSleigh");
   document.getElementById('peeker').classList.toggle('hidden');
   document.getElementById('dexterWalks').classList.toggle('hidden');
+
+  
   //decorations
   // const decorationCat = document.getElementById('catStocking');
   // const candleInTheWind = document.getElementById('candle');
@@ -75,6 +77,7 @@ Array.from(decorationHide).forEach(element => {
     // .classList.toggle('hidden');
       document.getElementById('dexterWalks').classList.toggle('hidden');
       document.getElementById('goodBoy').classList.toggle('hidden');
+      dexterSpeak.classList.toggle('hidden')
     return;
   // }else if(timePassed >= 12000){
   //     clearInterval(timer);
@@ -126,6 +129,7 @@ if(i = true){
     document.getElementById('photo').style.height = 0;
     document.getElementById('goodBoy').classList.add('hidden');
     document.getElementById('peeker').classList.add('hidden');
+    dexterSpeak.classList.add('hidden');
     // document.getElementById('dexterWalks').classList.toggle('hidden');
     resetAudio();
   }
