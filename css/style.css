@@ -248,6 +248,18 @@ right: -8vw;
   z-index: -1;
 }
 
+#dexterSpeak {
+    position: absolute;
+    top: -110px;
+    right: -23rem;
+    width: 30rem;
+}
+
+
+#dexterSpeak img {
+  width: 100%;
+}
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
